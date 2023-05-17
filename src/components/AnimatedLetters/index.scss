@@ -1,0 +1,22 @@
+.text-animate {
+    display: inline-block;
+    opacity: 0;
+    animation: bounceIn;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    min-width: 10px;
+    color: rgba(251, 255, 0, 0.775);
+    &:hover {
+        animation: rubberBand 0.01s 0.01s;
+    }
+}
+
+  
+@for $i from 12 through 45 {
+    .text-animate._#{$i} {
+        // color: rbg(0,0,#{$i*10});
+      animation-delay: calc($i / 10)s;
+      animation-delay: #{$i / 10}s;
+    }
+  }
