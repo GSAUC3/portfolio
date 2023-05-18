@@ -97,6 +97,12 @@ $logo-color: rgb(255, 208, 0);
           content: 'WORK X';
         }
       }
+
+      a.resume-link{
+        &:after {
+          content: 'RESUME';
+        }
+      }
   
       a.active {
         svg {

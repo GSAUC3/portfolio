@@ -1,9 +1,10 @@
 #Canvas{
     background: transparent;
     position: absolute;
-    
+    height: 100%;
+    width: 50%;
     right: 0;
-    z-index: -100;
+    z-index: 90;
    }
   
   #image1{

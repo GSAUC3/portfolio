@@ -1,0 +1,104 @@
+.resume-part{
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    min-height: 100vh;
+    background-color:gray;
+    font-size: 9.8px;
+    // font-size: xx-small;
+    
+    
+    p{
+        margin: 1px auto;
+    }
+    
+    @media (width<1000px) {
+        font-size: medium;
+    
+    }
+    
+    .container{
+        position: relative;
+        background-color:white;
+        // margin: 5px 10px 30px 100px;
+        margin-top: 5px;
+        max-width: 560px;
+        min-height: 95vh;
+        box-shadow: 10px 35px 55px rgba(0,0,0,0.5);
+        // color:white;
+        @media (width<800px) {
+            width: 96%;
+            margin: auto;
+        }
+
+        .top{
+            box-sizing: border-box;
+            hr{
+                width: 96%;
+            }
+            
+            
+            h1{
+            text-align: center;
+            }
+        .uls{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin: 0px;
+            @media (width<450px) {
+                flex-direction: column;
+            }
+        }
+        li{
+            list-style-type: none;
+            margin: 0px 3px;
+            
+            // &:hover{
+            //     text-decoration: underline;
+            // }
+        }
+        }
+        
+        .bottom{
+            display: flex;
+            
+            @media (width<1000px) {
+                flex-direction: column-reverse;
+            }
+                
+            .left{
+                // border: 1px solid red;
+                width: 40%;
+                
+                @media (width<1000px) {
+                width: 90%;
+                margin: auto;
+                
+            }
+            }
+            .right{
+                width: 60%;
+                
+                @media (width<1000px) {
+                width: 90%;
+                margin: auto;
+                
+            }
+            }
+            .left>div{
+                text-align: justify;
+                margin: 5px 5px 5px 15px;
+            }
+            
+            .right>div{
+                text-align: justify;
+                margin: 5px 15px 5px 15px;
+                
+            }
+            
+
+        }
+
+    }
+}

@@ -35,7 +35,7 @@ const Home = () => {
             />
           </h1>
           <Link to="/contact" className="flat-button">
-            DOWNLOAD CV
+            Contact Me
           </Link>
         </div>
 
