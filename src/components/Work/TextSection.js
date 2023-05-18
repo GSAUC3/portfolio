@@ -9,10 +9,9 @@ export const TextSection = ({ title, subtitle, ...props }) => {
           color="white"
           anchorX={"left"}
           anchorY="bottom"
-          fontSize={0.4}
-          maxWidth={4}
+          fontSize={0.3}
+          maxWidth={6}
           lineHeight={1}
-          font={"./fonts/DMSerifDisplay-Regular.ttf"}
         >
           {title}
           <meshStandardMaterial

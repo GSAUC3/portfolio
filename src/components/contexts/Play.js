@@ -12,7 +12,7 @@ export const PlayProvider = ({ children }) => {
       value={{
         play,
         setPlay,
-        end,    
+        end,
         setEnd,
         hasScroll,
         setHasScroll,

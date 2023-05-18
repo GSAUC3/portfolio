@@ -4,12 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { PlayProvider } from './components/contexts/Play';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <PlayProvider>
     <App />
+    </PlayProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

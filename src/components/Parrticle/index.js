@@ -37,7 +37,7 @@ canvas_sizes(canvas)
           this.size = this.effect.gap
           this.vx =0
           this.vy =0
-          this.ease = 0.2
+          this.ease = 0.25
           this.dx = 0
           this.dy = 0
           this.dist = 0

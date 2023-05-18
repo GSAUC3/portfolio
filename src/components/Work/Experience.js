@@ -3,7 +3,7 @@ import { useFrame } from "@react-three/fiber";
 import { gsap } from "gsap";
 import { useLayoutEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
-import { Euler, Group, Vector3 } from "three";
+import { Group, Vector3 } from "three";
 import { fadeOnBeforeCompile } from "../utils/fadeMaterial";
 import { Airplane } from "../Airplane";
 import { Background } from "./Background";
@@ -45,9 +45,9 @@ export const Experience = () => {
           curvePoints[1].y,
           curvePoints[1].z
         ),
-        title:`Technical Content Writer @ GeeksforGeeks`,
-        subtitle: 
-        `Contributed several articles on computing, mathematics and programming`,
+        title:"Technical Content Writer @GeeksforGeeks",
+        subtitle: `Sept 2021 – Feb 2022
+        Wrote and published various articles on python projects, sorting, Graphical user interface using python, OpenCV with python and mathematics`,
       },
       {
         cameraRailDist: 1.5,
@@ -56,10 +56,11 @@ export const Experience = () => {
           curvePoints[2].y,
           curvePoints[2].z
         ),
-        title: "ML intern @C-DAC",
-        subtitle: `I collaborated with a team to develop AutoNN, A No-code Automated machine learning framework in python. This framework offers simplified model training tools for classification and regression that require no prior machine learning or coding knowledge. 
-        As a team leader, I successfully developed a computer vision application utilizing OpenCV, Mediapipe, easyocr and tkinter to convert handwritten words created through hand gestures into machine-readable text format. 
-        Developed a computer vision application that enables hands-free control of mouse functionalities and keyboard shortcuts through gesture recognition. This was achieved`,
+        title: "ML intern @ C-DAC",
+        subtitle: `June 2022 – Dec 2022
+        • I collaborated with a team to develop AutoNN, A No-code Automated machine learning framework in python. This framework offers simplified model training tools for classification and regression that require no prior machine learning or coding knowledge.
+        • As a team leader, I successfully developed a computer vision application utilizing OpenCV, Mediapipe, easyocr and tkinter to convert handwritten words created through hand gestures into machine-readable text format.
+        • Developed a computer vision application that enables hands-free control of mouse functionalities and keyboard shortcuts through gesture recognition. This was achieved through the utilization of OpenCV and mediapipe technologies.`,
       },
       {
         cameraRailDist: -1,
@@ -68,8 +69,9 @@ export const Experience = () => {
           curvePoints[3].y,
           curvePoints[3].z
         ),
-        title: "Web Developer Intern @C-DAC",
-        subtitle: `Building a full-stack web app using Django and tailwind css`,
+        title: "Project intern @ISI Kolkata",
+        subtitle: `Sept 2021 – Jun 2022
+        Did my bachelor’s project focused on the classification of fundus images for diabetic retinopathy using deep learning. To accomplish this, I used state-of-the-art EfficientNet architecture built in PyTorch to train the model on the manually augmented Messidor dataset, which was able to attain 84.91% accuracy on the test set.`,
       },
       {
         cameraRailDist: 1.5,
@@ -78,8 +80,8 @@ export const Experience = () => {
           curvePoints[4].y,
           curvePoints[4].z - 12
         ),
-        title: "Freelance",
-        subtitle: `Started my journey as a freelance web developer`,
+        title: "Web developer intern @C-DAC",
+        subtitle: `Currently working on a full stack webapp, using Django as backend`,
       },
     ];
   }, []);
@@ -96,7 +98,7 @@ export const Experience = () => {
       {
         scale: new Vector3(4, 4, 4),
         position: new Vector3(-18, 0.2, -68),
-        rotation: new Euler(-Math.PI / 5, Math.PI / 6, 0),
+        
       },
       {
         scale: new Vector3(2.5, 2.5, 2.5),
@@ -118,10 +120,10 @@ export const Experience = () => {
           curvePoints[1].y + 4,
           curvePoints[1].z + 28
         ),
-        rotation: new Euler(0, Math.PI / 7, 0),
+        
       },
       {
-        rotation: new Euler(0, Math.PI / 7, Math.PI / 5),
+        
         scale: new Vector3(5, 5, 5),
         position: new Vector3(
           curvePoints[1].x - 13,
@@ -130,7 +132,7 @@ export const Experience = () => {
         ),
       },
       {
-        rotation: new Euler(Math.PI / 2, Math.PI / 2, Math.PI / 3),
+        
         scale: new Vector3(5, 5, 5),
         position: new Vector3(
           curvePoints[1].x + 54,
@@ -170,7 +172,7 @@ export const Experience = () => {
           curvePoints[2].y + 1,
           curvePoints[2].z - 86
         ),
-        rotation: new Euler(Math.PI / 4, 0, Math.PI / 3),
+        
       },
       // THIRD POINT
       {
@@ -188,7 +190,7 @@ export const Experience = () => {
           curvePoints[3].y,
           curvePoints[3].z + 30
         ),
-        rotation: new Euler(Math.PI / 4, 0, Math.PI / 5),
+        
       },
       {
         scale: new Vector3(4, 4, 4),
@@ -197,7 +199,7 @@ export const Experience = () => {
           curvePoints[3].y - 5,
           curvePoints[3].z - 8
         ),
-        rotation: new Euler(Math.PI, 0, Math.PI / 5),
+        
       },
       {
         scale: new Vector3(5, 5, 5),
@@ -206,7 +208,7 @@ export const Experience = () => {
           curvePoints[3].y - 5,
           curvePoints[3].z - 98
         ),
-        rotation: new Euler(0, Math.PI / 3, 0),
+        
       },
       // FOURTH POINT
       {
@@ -224,7 +226,7 @@ export const Experience = () => {
           curvePoints[4].y - 6,
           curvePoints[4].z - 42
         ),
-        rotation: new Euler(Math.PI / 4, 0, Math.PI / 5),
+        
       },
       {
         scale: new Vector3(3, 3, 3),
@@ -233,7 +235,7 @@ export const Experience = () => {
           curvePoints[4].y + 9,
           curvePoints[4].z - 62
         ),
-        rotation: new Euler(Math.PI / 3, 0, Math.PI / 3),
+        
       },
       // FINAL
       {
@@ -243,7 +245,7 @@ export const Experience = () => {
           curvePoints[7].y - 5,
           curvePoints[7].z + 60
         ),
-        rotation: new Euler(-Math.PI / 4, -Math.PI / 6, 0),
+        
       },
       {
         scale: new Vector3(3, 3, 3),
@@ -252,7 +254,7 @@ export const Experience = () => {
           curvePoints[7].y + 5,
           curvePoints[7].z + 120
         ),
-        rotation: new Euler(Math.PI / 4, Math.PI / 6, 0),
+        
       },
       {
         scale: new Vector3(4, 4, 4),
@@ -261,7 +263,7 @@ export const Experience = () => {
           curvePoints[7].y,
           curvePoints[7].z
         ),
-        rotation: new Euler(0, 0, 0),
+        
       },
     ],
     []
@@ -278,21 +280,23 @@ export const Experience = () => {
   const cameraGroup = useRef();
   const cameraRail = useRef();
   const scroll = useScroll();
+  const camera = useRef();
   const lastScroll = useRef(0);
-  // const camera = useRef();
 
   useFrame((_state, delta) => {
+    
+    if (window.innerWidth > window.innerHeight){
+       camera.current.fov = 30
+       camera.current.position.z = 5
+      }
+      else{
+        
+        camera.current.fov = 80
+        camera.current.position.z = 2
+    }
 
 
-    // if (window.innerWidth > window.innerHeight) {
-    //   // LANDSCAPE
-    //   camera.current.fov = 30;
-    //   camera.current.position.z = 5;
-    // } else {
-    //   // PORTRAIT
-    //   camera.current.fov = 80;
-    //   camera.current.position.z = 2;
-    // }
+
     const scrollOffset = Math.max(0, scroll.offset);
 
     let friction = 1;
@@ -323,7 +327,7 @@ export const Experience = () => {
     let lerpedScrollOffset = THREE.MathUtils.lerp(
       lastScroll.current,
       scrollOffset,
-      delta * friction
+      delta *friction
     );
     // PROTECT BELOW 0 AND ABOVE 1
     lerpedScrollOffset = Math.min(lerpedScrollOffset, 1);
@@ -335,7 +339,7 @@ export const Experience = () => {
     const curPoint = curve.getPoint(lerpedScrollOffset);
 
     // Follow the curve points
-    cameraGroup.current.position.lerp(curPoint, delta * 24);
+    cameraGroup.current.position.lerp(curPoint, delta *25);
 
     // Make the group look ahead on the curve
 
@@ -399,8 +403,8 @@ export const Experience = () => {
 
   const tl = useRef();
   const backgroundColors = useRef({
-    colorA: "black",
-    colorB: "grey",
+    colorB: "white",
+    colorA: "cyan",
   });
 
   useLayoutEffect(() => {
@@ -418,8 +422,8 @@ export const Experience = () => {
     });
     tl.current.to(backgroundColors.current, {
       duration: 1,
-      colorA: "#81318b",
-      colorB: "#55ab8f",
+      colorA: "cyan",
+      colorB: "red",
     });
 
     tl.current.pause();
@@ -432,12 +436,12 @@ export const Experience = () => {
       <group ref={cameraGroup}>
         <Background backgroundColors={backgroundColors} />
         <group ref={cameraRail}>
-          <PerspectiveCamera  position={[0, 0, 5]} fov={30} makeDefault   />
+          <PerspectiveCamera ref={camera} position={[0, 0, 5]} fov={30} makeDefault />
         </group>
         <group ref={airplane}>
           <Float floatIntensity={1} speed={1.5} rotationIntensity={0.5}>
             <Airplane
-              rotation-y={-Math.PI }
+              rotation-y={-Math.PI}
               scale={[0.2, 0.2, 0.2]}
               position-y={-0.5}
             />
@@ -463,7 +467,7 @@ export const Experience = () => {
             ]}
           />
           <meshStandardMaterial
-            color={"aliceblue"}
+            color={"white"}
             opacity={1}
             transparent
             envMapIntensity={2}

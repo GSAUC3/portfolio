@@ -6,7 +6,7 @@ import {
   faLinkedin,
   faGithub,
   faYoutube,
-  faSkype,
+  
 } from '@fortawesome/free-brands-svg-icons'
 import {
   faHome,
