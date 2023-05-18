@@ -1,13 +1,13 @@
 import { ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Experience } from "./Experience";
-
+import './index.scss'
 function Work() {  
 
   // const { play, end } = usePlay();
 
   return (
-    <>
+    <div className="work-section">
 
       <Canvas>
         <color attach="background" args={["#ececec"]} />
@@ -29,7 +29,7 @@ function Work() {
         </ScrollControls>
       </Canvas>
 
-    </>
+    </div>
   );
 }
 
