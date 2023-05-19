@@ -28,7 +28,8 @@ function Work() {
           <Experience />
         </ScrollControls>
       </Canvas>
-
+        
+      
     </div>
   );
 }

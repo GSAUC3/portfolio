@@ -124,7 +124,7 @@ const Sidebar = () => {
           onClick={() => setShowNav(true)}
           icon={faBars}
           color="#ffd700"
-          size="3x"
+          size="2x"
           className='hamburger-icon' />
     </div>
   )

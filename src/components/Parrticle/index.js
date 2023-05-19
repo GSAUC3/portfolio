@@ -6,7 +6,7 @@ const Canvas = () => {
   const canvasRef = useRef(null)
   useEffect(()=>{
     const canvas = canvasRef.current
-    const c = canvas.getContext('2d')
+    const c = canvas.getContext('2d',{ willReadFrequently: true })
     function canvas_sizes(canvas){
         
         if (window.innerWidth < 800){   
@@ -37,13 +37,13 @@ canvas_sizes(canvas)
           this.size = this.effect.gap
           this.vx =0
           this.vy =0
-          this.ease = 0.25
+          this.ease = 0.4
           this.dx = 0
           this.dy = 0
           this.dist = 0
           this.force = 0
           this.angle = 0
-          this.friction = 0.3
+          this.friction = 0.7
           
 
       }

@@ -131,10 +131,13 @@ $logo-color: rgb(255, 208, 0);
         }
   
         &:hover {
+          
           .anchor-icon {
+            transform: scale(1.5);
             color: $logo-color;
           }
           #github{
+
             color:rgb(171, 5, 171);
           }
           #youtube{

@@ -282,18 +282,21 @@ export const Experience = () => {
   const scroll = useScroll();
   const camera = useRef();
   const lastScroll = useRef(0);
-
+  
   useFrame((_state, delta) => {
-    
+  window.addEventListener('resize',()=>{
+
     if (window.innerWidth > window.innerHeight){
-       camera.current.fov = 30
-       camera.current.position.z = 5
+       camera.current.fov = 40
+       camera.current.position.z = 3  
       }
       else{
-        
         camera.current.fov = 80
-        camera.current.position.z = 2
+        camera.current.position.z = 5
     }
+  })
+
+    
 
 
 
@@ -436,14 +439,15 @@ export const Experience = () => {
       <group ref={cameraGroup}>
         <Background backgroundColors={backgroundColors} />
         <group ref={cameraRail}>
-          <PerspectiveCamera ref={camera} position={[0, 0, 5]} fov={30} makeDefault />
+          <PerspectiveCamera ref={camera} position={[0, 0, 5]} fov={40} makeDefault />
         </group>
         <group ref={airplane}>
           <Float floatIntensity={1} speed={1.5} rotationIntensity={0.5}>
             <Airplane
               rotation-y={-Math.PI}
               scale={[0.2, 0.2, 0.2]}
-              position-y={-0.5}
+              position-y={-0.4}
+              position-z={-0.4}
             />
           </Float>
         </group>

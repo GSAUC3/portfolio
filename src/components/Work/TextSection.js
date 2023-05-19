@@ -27,7 +27,6 @@ export const TextSection = ({ title, subtitle, ...props }) => {
         anchorY="top"
         fontSize={0.2}
         maxWidth={6}
-        font={"./fonts/Inter-Regular.ttf"}
       >
         {subtitle}
         <meshStandardMaterial

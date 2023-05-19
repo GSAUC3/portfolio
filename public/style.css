@@ -1,7 +1,7 @@
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
   * {
-    scrollbar-width: auto;
+    scrollbar-width: 4px;
     scrollbar-color: #ffff00 #000000;
   }
 

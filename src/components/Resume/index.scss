@@ -1,13 +1,47 @@
+.project-title{
+    color:blue;
+    font-weight: bold;
+}
+
+
 .resume-part{
     display: flex;
     justify-content: center;
     overflow-y: scroll;
     min-height: 100vh;
-    background-color:gray;
+    // background-color:rgb(83, 83, 83);
     font-size: 9.8px;
     // font-size: xx-small;
+
+    .float{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position:fixed;
+        width:40px;
+        height:40px;
+        z-index:100;
+        bottom:40px;
+        right:40px;
+        background-color:rgb(5, 5, 159);
+        border-radius:50px;
+        text-align:center;
+        box-shadow: 1px 1px 5px #05e2ff;
+    }
     
     
+    
+    a{
+        color: black;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+            transform: scale(1.2);
+        }
+        
+
+        
+    }
     p{
         margin: 1px auto;
     }
@@ -21,10 +55,11 @@
         position: relative;
         background-color:white;
         // margin: 5px 10px 30px 100px;
+        // color: cyan;
         margin-top: 5px;
         max-width: 560px;
         min-height: 95vh;
-        box-shadow: 10px 35px 55px rgba(0,0,0,0.5);
+        box-shadow: 5px 51px 55px rgb(0, 153, 255,0.4);
         // color:white;
         @media (width<800px) {
             width: 96%;
@@ -51,13 +86,14 @@
             }
         }
         li{
+            
             list-style-type: none;
             margin: 0px 3px;
             
-            // &:hover{
-            //     text-decoration: underline;
-            // }
+            
         }
+
+           
         }
         
         .bottom{
