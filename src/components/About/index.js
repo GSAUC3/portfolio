@@ -1,14 +1,18 @@
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import Loader from 'react-loaders'
-import AppleWatch from '../AppleWatch'
+// import AppleWatch from '../AppleWatch'
+import React,{ Suspense } from 'react'
+
+
+const IFrameComponent = React.lazy(()=>import('../AppleWatch'));
 
 const About = () => {
   const letterClass = 'text-animate'
 
   return (
-    <div className='ABOUT'>
-      <div className="about-container1 main glass">
+    <div className='ABOUT '>
+      <div className="container about-container1  main glass">
         <div className="text-zone " >
           <h1>
             <AnimatedLetters
@@ -49,7 +53,11 @@ const About = () => {
         </div>
         <div className="apple-outer-div ">
           <div className="spline">
-            <AppleWatch  className='apel'/>
+            <Suspense fallback={ <Loader type="semi-circle-spin"/>}>
+              <IFrameComponent/>
+            </Suspense>
+            {/* <AppleWatch  className='apel'/> */}
+
           </div>
         </div>
       </div>
