@@ -9,7 +9,7 @@ body {
     sans-serif;
   display:block;
   
-  overflow:hidden;
+  /* overflow:hidden; */
   /* background:rgb(42, 41, 41); */
   background:rgb(42, 41, 41);
   -webkit-font-smoothing: antialiased;

@@ -1,0 +1,118 @@
+{
+    "name":"Rajarshi Banerjee",
+    "experience":[
+        {
+            "company-name":"Centre for Development of Advanced Computing",
+            "role":"Machine Learning Research Intern",
+            "duration":"June 2022 - Dec 2022",
+            "description":"I collaborated with a team to develop AutoNN, A No-code Automated machine learning framework in python. This framework offers simplified model training tools for classification and regression that require no prior machine learning or coding knowledge.\nAs a team leader, I successfully developed a computer vision application utilizing OpenCV, Mediapipe, easyocr and tkinter to convert handwritten words created through hand gestures into machine-readable text format.\nDeveloped a computer vision application that enables hands-free control of mouse functionalities and keyboard shortcuts through gesture recognition. This was achieved through the utilization of OpenCV and mediapipe technologies"
+        },
+        {
+            "company-name":"Indian Statistical Institute, ISI Kolkata",
+            "role":"Project Intern",
+            "duration":"Sept 2021 - Jun 2022",
+            "description":"Did my bachelor's project focused on the classification of fundus images for diabetic retinopathy using deep learning. To accomplish this, I used state-of-the-art EfficientNet architecture built in PyTorch to train the model on the manually augmented Messidor dataset, which was able to attain 84.91% accuracy on the test set"
+        },
+        {
+            "company-name":"GeeksforGeeks",
+            "role":"Technical Content Writer",
+            "duration":"Sept 2021 - Feb 2022",
+            "description":"Wrote and published various articles on python projects, sorting, Graphical user interface using python, OpenCV with python and mathematics"
+        }
+    ],
+    "education":[
+        {
+            "Institute":"University of Calcutta",
+            "duration":"2018 - 2022",
+            "marks":"8.00",
+            "total-marks":"10.00",
+            "major":"Optics and Optoelectronics Engineering",
+            "degree":"B.Tech"
+
+        },
+        {
+            "Institute":"Aditya Academy Senior Secondary",
+            "duration":"2015 - 2017",
+            "marks":"",
+            "total-marks":"",
+            "major":"Science",
+            "degree":"10+2"
+        }
+    ],
+    "skills":
+        {
+            "programming languages":"Python, C++, JavaScript, HTML5, CSS3, SQL",
+            "web":"React js, Django, Tailwind css, Bootstrap, Next js, Sass",
+            "ml":"PyTorch, Scikit-Learn, OpenCV, NumPy, Pandas, keras",
+            "soft skills":"",
+            "others":"Data Structure, Linear Algebra, Algorithms, OOPs"
+        }
+    ,
+    "certificates":[
+
+     {
+
+         "name":"Data Structure with python by Sandeep Jain from GeeksforFeeks",
+         "url":"https://media.geeksforgeeks.org/courses/certificates/1d076508c24b08e764cb3b097821b6ba.pdf"
+     },
+     {
+        "name":"Elements of AI from the University of Helsinki",
+        "url":"https://certificates.mooc.fi/validate/jo9bgejqks"
+    },
+    {
+        "name":"Computer vision with Python from Udemy",
+        "url":"https://www.udemy.com/certificate/UC-d8e4bdfd-6c52-4422-beaa-1549cb9e7171/"
+    },
+    {
+
+        "name":"Computer vision from Kaggle",
+        "url":"https://www.kaggle.com/learn/certification/banerz/computer-vision"
+    },
+    {
+
+        "name":"Winter School of Deep Learning from ISI Kolkata",
+        "url":"https://github.com/GSAUC3/GSAUC3/blob/main/RAJARSHI%20BANERJEE%20certificate.pdf"
+    }   
+    ],
+
+    "achievements":"",
+    "projects":[
+        {
+            "title":"Sorting Algorithm Visualizer",
+            "tech-stack":"Python, Tkinter",
+            "description":"Designed a GUI application using the Tkinter written in python to visualize various sorting algorithms",
+            "link":"https://github.com/GSAUC3/Algorithm_visualizer"
+        },
+        {
+            "title":"Snake Ai",
+            "tech-stack":"Python, Pygame, Pytorch",
+            "description":"Utilizing a combination of a neural network and genetic algorithm employed in PyTorch, the AI was trained to master the gameplay of Snake",
+            "link":"https://github.com/GSAUC3/Snake-Ai"
+        },
+        {
+            "title":"Pytorch model summary library",
+            "tech-stack":"Python, Pytorch",
+            "description":"Developed a python package to retrieve the model summary of models created in PyTorch.",
+            "link":"https://github.com/GSAUC3/pytorch-model-details"
+        }
+        
+    ],
+    "publication":[
+        {
+            "name":"Presented a paper in the ICCET2022 conference, which was published in the International Journal of Science and Innovative Engineering & Technology (IJSIET). Topic: Human-computer interaction Controlling mouse functionalities using hand gestures.",
+            "link":"http://ijsiet.org/vol12022/53.pdf"
+        }
+    ],
+    "hobbies":"Playing Guitar, Chess, Ditigal Art, Making Videos, Watching sit-down comedy, Cracking lame jokes",
+    "online-presence":{
+        "Email":"rajarshiban13@gmail.com",
+        "GitHub":"https://github.com/GSAUC3",
+        "LinkedIn":"https://www.linkedin.com/in/rajarshi-banerz/",
+        "LeetCode":"https://leetcode.com/rajarshiban13/",
+        "Kaggle":"https://www.kaggle.com/banerz",
+        "Website":"https://portfolio-gsauc3.vercel.app/",
+        "Phone":"tel:+91 9903358043"
+    }
+
+    
+}

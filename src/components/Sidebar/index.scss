@@ -3,10 +3,10 @@ $logo-color: rgb(255, 208, 0);
 .nav-bar {
     background: #000000;
     width: 60px;
-    height: 100%;
-    position: absolute;
+    height: 100vh;
+    position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 30;
     min-height: 500px;
   
     .logo {

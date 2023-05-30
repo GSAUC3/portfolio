@@ -1,34 +1,9 @@
-import {  useState } from 'react'
 import Loader from 'react-loaders'
-import { useRef } from 'react'
-import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 
 const Contact = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-  const form = useRef()
-
-  const sendEmail = (e) => {
-    e.preventDefault()
-
-    emailjs
-      .sendForm(
-        'service_4ye5l2m',
-        'template_vz934iq',
-        form.current,
-        '8o3p433QmHT81-Lw-W7fI'
-      )
-      .then(
-        () => {
-          alert('Message successfully sent!')
-          window.location.reload(false)
-        },
-        () => {
-          alert('Failed to send the message, please try again')
-        }
-      )
-  }
+  const letterClass = 'text-animate'
 
   return (
     <>
@@ -44,7 +19,7 @@ const Contact = () => {
             </h1>
 
             <div className="contact-form">
-              <form ref={form} onSubmit={sendEmail}>
+              <form  action='https://formspree.io/f/myyozzza' method='POST'>
                 <ul>
                   <li className="half">
                     <input
@@ -58,7 +33,8 @@ const Contact = () => {
                     <input
                       placeholder="Email"
                       type="email"
-                      name="email"
+                      id='email'
+                      name="_replyto"
                       required
                     />
                   </li>
