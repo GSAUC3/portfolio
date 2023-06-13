@@ -9,7 +9,8 @@ import './dark.scss'
 import ON from '../../assets/images/bulb_on-removebg-preview.png'
 import OFF from '../../assets/images/bulb_off-removebg-preview.png'
 import lamp from '../../assets/images/pngegg (2) (1).png'
- 
+import html2pdf from 'html2pdf.js';
+
 
 const Resume = () => {
   const [isDark, setIsDark] = useState(false)
@@ -32,8 +33,17 @@ const Resume = () => {
     }
   }, [isDark])
 
+  const generatePDF = () => {
+    const element = document.getElementById('pdfElement'); 
+    html2pdf()
+      .set({ filename: 'RajarshiBanerjeeResume.pdf' }) 
+      .from(element)
+      .save();
+  };
+  
+  
   return (
-    <div className={isDark ? 'resume-part-light' : 'resume-dark'}>
+    <div className={isDark ? 'resume-part-light' : 'resume-dark'}  >
       <div onClick={toggleMode} id="toggle">
 
         {/* <FontAwesomeIcon icon={faMoon} id='moon' /> */}
@@ -44,17 +54,19 @@ const Resume = () => {
         
       </div>
 
-      <a href="https://gsauc3.github.io/ThePyLama/images/CV.pdf" class="float">
+      
         <FontAwesomeIcon
           icon={faDownload}
-          color="white"
-          className="anchor-icon"
-          id="github"
+          color="black"
+          onClick={generatePDF}
+          className="anchor-icon float"
+          id="download"
           size="1x"
         />
-      </a>
+        
       <div className="container">
-        <div className="top">
+        <div id='pdfElement'>
+        <div className="top" >
           <h1>{data['name'].toUpperCase()}</h1>
           <div className="online-presence">
             {Object.keys(data['online-presence']).map((item, i) => (
@@ -168,6 +180,7 @@ const Resume = () => {
               ))}
             </div>
           </div>
+        </div>
         </div>
       </div>
 

@@ -17,6 +17,7 @@
     "animate.css": "^4.1.1",
     "gsap": "^3.11.5",
     "gsap-trial": "^3.11.5",
+    "html2pdf.js": "^0.10.1",
     "lamina": "^1.1.23",
     "leaflet": "^1.9.3",
     "loaders.css": "^0.1.2",

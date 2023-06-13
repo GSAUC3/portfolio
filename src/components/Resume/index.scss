@@ -58,15 +58,22 @@ button{
     justify-content: center;
     align-items: center;
     position:fixed;
-    width:40px;
-    height:40px;
+    width:20px;
+    height:20px;
+    padding: 8px;
     z-index:100;
     bottom:40px;
     right:40px;
-    background-color:rgb(5, 5, 159);
+    background-color:#ffd700;
     border-radius:50px;
     text-align:center;
-    box-shadow: 1px 1px 5px #000000;
+    box-shadow: 1px 1px 5px #e5ff00cf;
+    :hover{
+        cursor: pointer;
+        color: white;
+        
+        
+    }
 }
 
 
