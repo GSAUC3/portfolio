@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import Loader from 'react-loaders'
 import data from '../../assets/json/data.json'
 import './index.scss'
+import externalCSS from './styles.module.css'; // Path to the compiled CSS file
 import './dark.scss'
 import ON from '../../assets/images/bulb_on-removebg-preview.png'
 import OFF from '../../assets/images/bulb_off-removebg-preview.png'
@@ -35,9 +36,20 @@ const Resume = () => {
 
   const generatePDF = () => {
     const element = document.getElementById('pdfElement'); 
+    const htmlContent = element.innerHTML;
+    const finalHTML = `
+    <html>
+      <head>
+        <style>${externalCSS}</style>
+      </head>
+      <body>
+        ${htmlContent}
+      </body>
+    </html>
+  `;
     html2pdf()
       .set({ filename: 'RajarshiBanerjeeResume.pdf' }) 
-      .from(element)
+      .from(finalHTML)
       .save();
   };
   
