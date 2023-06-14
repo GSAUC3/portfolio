@@ -1,72 +1,50 @@
 // import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import {
+  faArrowUpRightFromSquare,
+  faDownload,
+} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useState } from 'react'
+import React from 'react'
 import Loader from 'react-loaders'
 import data from '../../assets/json/data.json'
-import './index.scss'
-import externalCSS from './styles.module.css'; // Path to the compiled CSS file
-import './dark.scss'
-import ON from '../../assets/images/bulb_on-removebg-preview.png'
-import OFF from '../../assets/images/bulb_off-removebg-preview.png'
-import lamp from '../../assets/images/pngegg (2) (1).png'
-import html2pdf from 'html2pdf.js';
-
+import externalCSS from './index.css'
+import html2pdf from 'html2pdf.js'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const Resume = () => {
-  const [isDark, setIsDark] = useState(false)
-
-  const toggleMode = () => {
-    setIsDark(!isDark)
-  }
-  React.useEffect(() => {
-    const moon = document.querySelector('#moon')
-    const sun = document.querySelector('#sun')
-
- 
-    if (isDark === true) {
-      moon.style.visibility = 'hidden'
-      sun.style.visibility = 'visible'
-      
-    } else {
-      moon.style.visibility = 'visible'
-      sun.style.visibility = 'hidden'
-    }
-  }, [isDark])
-
   const generatePDF = () => {
-    const element = document.getElementById('pdfElement'); 
-    const htmlContent = element.innerHTML;
+    const element = document.querySelector('.resume')
+
+    const htmlContent = element.innerHTML
+
     const finalHTML = `
-    <html>
-      <head>
-        <style>${externalCSS}</style>
-      </head>
-      <body>
-        ${htmlContent}
-      </body>
-    </html>
-  `;
+      <html>
+        <head>
+          <style>
+            ${externalCSS}
+            .resume{
+              width:1200px;
+              padding:5px;
+            }
+            .gap5{
+              gap:5px;
+            }
+          </style>
+        </head>
+        <body>
+          ${htmlContent}
+        </body>
+      </html>
+    `
     html2pdf()
-      .set({ filename: 'RajarshiBanerjeeResume.pdf' }) 
+      .set({ filename: 'RajarshiBanerjeeResume.pdf' })
       .from(finalHTML)
-      .save();
-  };
-  
-  
+      .save()
+  }
+
   return (
-    <div className={isDark ? 'resume-part-light' : 'resume-dark'}  >
-      <div onClick={toggleMode} id="toggle">
-
-        {/* <FontAwesomeIcon icon={faMoon} id='moon' /> */}
-        {/* <FontAwesomeIcon icon={faSun} id='sun'/> */}
-        <img src={lamp} alt="lamp" id="lamp" />
-        <img src={OFF} alt="moon" id='moon'/>
-        <img src={ON} alt="sun" id='sun'/>
-        
-      </div>
-
-      
+    <>
+      <div className="HOME ">
         <FontAwesomeIcon
           icon={faDownload}
           color="black"
@@ -75,129 +53,130 @@ const Resume = () => {
           id="download"
           size="1x"
         />
-        
-      <div className="container">
-        <div id='pdfElement'>
-        <div className="top" >
-          <h1>{data['name'].toUpperCase()}</h1>
-          <div className="online-presence">
-            {Object.keys(data['online-presence']).map((item, i) => (
-              // this is one liner if else in javascript (condition)? (true statement): (false statement)
-              <a
-                key={i}
-                href={
-                  item === 'Email'
-                    ? 'mailto:' + data['online-presence'][item]
-                    : data['online-presence'][item]
-                }
-              >
-                {item}
-              </a>
-            ))}
-          </div>
-          <hr />
-        </div>
-        <div className="bottom">
-          {/* ________left _----------- */}
-          <div className="left">
-            <div className="skills">
-              <h2>SKILLS</h2>
-              {Object.keys(data['skills']).map((item, i) => (
-                <div key={i}>
-                  {data['skills'][item] !== '' && (
-                    <div>
-                      <div style={{ fontWeight: 'bold' }}>
-                        {item.toUpperCase()}
+        <div className="dashboard">
+          <div className="resume ">
+            <div className="heading glass resume-card">
+              <h1 className="text-center">{data['name'].toUpperCase()}</h1>
+              <div className="socials">
+                {Object.keys(data['online-presence']).map((item, i) => (
+                  <div key={i} className="social-links">
+                    <a
+                      href={data['online-presence'][item]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {item}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex bottom">
+              <div className="flex flex-col left ">
+                <div className="skills glass resume-card">
+                  <h2 className=" yellow">SKILLS</h2>
+                  {Object.keys(data['skills']).map((item, i) => (
+                    <div key={i}>
+                      <div className='h4 my'>{data['skills'][item] ? item.toUpperCase() : ''}</div>
+                      <div className="flex flex-wrap">
+                        {data['skills'][item]
+                          ? data['skills'][item].split(', ').map((x, j) => (
+                              <div key={j} className="skills-btn">
+                                {x}
+                              </div>
+                            ))
+                          : ''}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="education glass resume-card">
+                  <h2 className="yellow">EDUCATION</h2>
+                  {data['education'].map((item, i) => (
+                    <div key={i} className="my">
+                      <div className="flex space-between ">
+                        <div className="bold">{item['Institute']}</div>
+                        <div className="small">{item['duration']}</div>
+                      </div>
+                      <div className="flex space-between">
+                        <div>{item['major']}</div>
+                        <div>{item['degree']}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="certificates glass resume-card">
+                  <h2 className="yellow">CERTIFICATES</h2>
+                  {data['certificates'].map((x, i) => (
+                    <div className="flex gap5 my" key={i}>
+                      <div>{x['name']}</div>
+                      <a
+                        href={x['url']}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-col  right">
+                <div className="workx glass resume-card">
+                  <h2 className="yellow">WORK EXPERIENCE</h2>
+                  {data['experience'].map((item, i) => (
+                    <div key={i}>
+                      <div className='h3 my'>{item['company-name']}</div>
+                      <div className="flex space-between my border-b">
+                        <div>{item['role']}</div>
+                        <div className="small">{item['duration']}</div>
                       </div>
 
-                      {data['skills'][item].split(', ').map((x, i) => (
-                        <div id="skill" key={i}>
-                          {x}
-                        </div>
-                      ))}
+                      <p className='justify'>{item['description']}</p>
                     </div>
-                  )}
+                  ))}
                 </div>
-              ))}
-            </div>
 
-            <hr />
+                {/* <div className="achievements glass resume-card"></div> */}
 
-            <div className="certificates">
-              <h2>CERTIFICATES</h2>
-              {data['certificates'].map((item, i) => (
-                <div key={i}>
-                  <a href={item['url']} target="_blank" rel="noreferrer">
-                    {item['name']}
-                  </a>
+                <div className="projects glass resume-card">
+                  <h2 className="yellow">PROJECTS</h2>
+                  {data['projects'].map((x, i) => (
+                    <div key={i}>
+                      <div className='h4 bold my'>{x['title']}</div>
+
+                      <div className="flex space-between my">
+                        <div>{x['description']}</div>
+                        <a
+                          href={x['link']}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FontAwesomeIcon icon={faGithub} color="yellow" />
+                        </a>
+                      </div>
+                      <div className="flex">
+                        {x['tech-stack'].split(', ').map((x, j) => (
+                          <div key={j} className="tech">
+                            {x}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-            <hr />
-            <div className="publication">
-              <h2>PUBLICATION</h2>
-              {data['publication'].map((x, i) => (
-                <div className="justi">
-                  {x['name']} |{' '}
-                  <a href={x['link']} target="_blank" rel="noreferrer">
-                    (abstract)
-                  </a>
-                </div>
-              ))}
+              </div>
             </div>
           </div>
-
-          {/* ____________________--right    */}
-
-          <div className="right">
-            <div className="experience">
-              <h2>EXPERIENCE</h2>
-              {data['experience'].map((item, i) => (
-                <div className="exp-content" key={i}>
-                  <div className="title">{item['company-name']} </div>
-                  <div className="flex">
-                    <> {item['role']}</>
-                    <div className="text-sm">{item['duration']}</div>
-                  </div>
-                  <div className="exp-description">{item['description']}</div>
-                </div>
-              ))}
-            </div>
-
-            <div className="project">
-              <h2>PROJECTS</h2>
-              {data['projects'].map((item, i) => (
-                <div key={i}>
-                  <div>{item['title']}</div>
-
-                  <div>{item['description']}</div>
-
-                  <div>{item['tech-stack']}</div>
-                </div>
-              ))}
-            </div>
-
-            <div className="education">
-              <h2>EDUCATION</h2>
-              {data['education'].map((item, i) => (
-                <>
-                  <div className="flex space-b">
-                    <div>{item['Institute']}</div>
-                    <div>{item['duration']}</div>
-                  </div>
-                  <div>
-                    {item['major']} | {item['degree']}
-                  </div>
-                </>
-              ))}
-            </div>
-          </div>
-        </div>
         </div>
       </div>
 
       <Loader type="pacman" />
-    </div>
+    </>
   )
 }
 
